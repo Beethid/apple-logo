@@ -1,59 +1,100 @@
-body {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
+.apple, .butt:before, .top span:after, .middle:after, .top:before, .top:after, .middle:before, .butt:after {
+    background: #FFF; /* foreground color */
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body, .footer, .middle span, .middle, .top, .top span {
+	background: #CCC; /* background color */
 }
-
 .apple {
-  width: 240px;
-  height: 200px;
-  position: relative;
-  background-color: black;
-  border-radius: 39% 39% 51% 51%/ 39% 39% 90% 90%;
+    width: 230px;
+    height: 200px;
+    border-radius: 36% 36% 41% 41% / 42% 42% 75% 75%;   
+    position: relative;
+    margin: 80px auto 0;
+}
+.footer {
+    position: absolute;
+    width: 60%;
+    height: 62%;
+    right: -40%;
+    top: 8%;
+    border-radius: 60%;
+}
+.middle span {
+    display: block;
+    position: absolute;
+    border-radius: 100% 100% 0% 0%;
+    width: 24.5%;
+    height: 400%;
+    bottom: -239%;
+    left: 38%;
+}
+.middle {
+    position: absolute;
+    width: 100%;
+    height: 4%;
+    bottom: -1%;
+}
+.middle:before {
+    content: '';
+    position: absolute;
+    width: 24%;
+    height: 400%;
+    border-radius: 0% 0% 100% 100%;
+    left: 21%;
+    bottom: 38%;
+}
+.middle:after {
+    content: '';
+    position: absolute;
+    width: 23.4%;
+    height: 400%;
+    border-radius: 0% 0% 100% 100%;
+    right: 21%;
+    bottom: 38%;
 }
 
-.apple::before {
-  content: "";
-  position: absolute;
-  width: 20%;
-  height: 15%;
-  background-color: black;
-  top: -20%;
-  border-radius: 15px 0;
-  transform: skew(-33deg);
-  left: 50%;
-  z-index: 999;
+
+.top span {
+    display: block;
+    position: absolute;
+    border-radius: 0 0 44% 44% / 0 0 100% 100%;
+    width: 63%;
+    height: 259%;
+    top: -92%;
+    left: 18.6%;
+    z-index: 3;
 }
-
-.apple::after {
-  content: "";
-  width: 49%;
-  height: 54%;
-  border-radius: 50%;
-  background-color: white;
-  position: absolute;
-  right: -20%;
-  top: 40px;
+.top span:after {
+    border-radius: 100% 0 100% 0;
+    content: "";
+    height: 242%;
+    left: 41%;
+    position: absolute;
+    top: -193%;
+    width: 90%;
 }
-
-.apple span::after {
-  content: "";
-  position: absolute;
-  background-color: white;
-  top: -8%;
-  width: 50px;
-  height: 30px;
-
-  left: 41%;
-  border-radius: 50% 50% 20% 20% / 90% 90% 40% 40%;
-  transform: rotate(180deg);
+.top {
+    position: absolute;
+    width: 42%;
+    height: 4%;
+    top: 0px;
+    left: 29%;
+}
+.top:before {
+    content: '';
+    position: absolute;
+    width: 62%;
+    height: 260%;
+    border-radius: 100% 100% 0% 0% / 100% 200% 0% 0%;
+    left: -27%;
+    top: 1%;
+}
+.top:after {
+    content: '';
+    position: absolute;
+    width: 62%;
+    height: 260%;
+    border-radius: 100% 100% 0% 0% / 200% 100% 0% 0%;
+    right: -27%;
+    top: 1%;
 }
